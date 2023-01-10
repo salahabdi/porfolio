@@ -1,0 +1,80 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100px;
+  background: transparent;
+  color: #fff;
+  position: sticky; 
+  top: 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 0 50px;
+  color: rgb(1, 38, 80);
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 50px;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-link {
+    display: none;
+  }
+  .navbar {
+    position: relative;
+  }
+  .navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .navbar:hover::before {
+    visibility: visible;
+    opacity: 1;
+  }
+  .navbar > * {
+    display: none;
+  }
+  .navbar > *:last-child {
+    display: block;
+  }
+  .navbar > *:last-child::after {
+    content: 'Menu';
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
+  }
+  .navbar > *:last-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .navbar > *:last-child:hover::before {
+    background-color: rgba(0,0,0,0.3);
+  }
+  .navbar > *:last-child .nav-link {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    &:hover {
+      background-color: #444;
+    }
+  }
+}

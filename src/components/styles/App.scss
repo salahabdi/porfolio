@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 100px, 30px, 90px;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background-color: rgba(199, 214, 246, 0.967);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content {
+  padding: 50px 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 10px;
+  }
+  .content {
+    padding: 20px 0;
+  }
+}
