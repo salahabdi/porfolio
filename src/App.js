@@ -1,12 +1,14 @@
 
 import React from 'react';
-import About from "./components/About";
 import Contact from "./components/Contact";
-import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import Navbar from './components/Navbar';
 import Home from "./components/Home";
 import './components/styles/App.scss';
 import {Routes, Route } from 'react-router-dom';
+// import Footer from './components/Footer';
+
+
 
 
 export default function App() {
@@ -15,9 +17,8 @@ export default function App() {
       <MyLayout>
         <React.Fragment>
           <Routes>
-            {/* <Route path="/" element={<Navbar/>} /> */}
+            
             <Route exact path="/" element={<Home/>} />
-            <Route path="/about" element={<About/>} />
             <Route path="/contact" element={<Contact/>} />
             <Route path="/projects" element={<Projects/>} />
           </Routes>
@@ -29,8 +30,10 @@ export default function App() {
   function MyLayout({ children }) {
     return (
       <div>
-        <Navbar />
+        <div>
+          <Navbar />
         {children}
+      </div>
       </div>
     );
   }

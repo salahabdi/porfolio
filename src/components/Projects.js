@@ -1,14 +1,19 @@
 import React from "react"
+import Cards from "./Cards"
+import image from './assets/image.png'
 
 
 export default function Projects() {
     return(
         <div>
-            <div>
-                <h1> THis Projects page</h1>
-            </div>
-            <img src="/image.png" alt="no imag" />
+             <Cards 
+              image={image} 
+              title='Project Title'
+              description='Project Description'
+              />
+              
         </div>
+        
     
        )
 }

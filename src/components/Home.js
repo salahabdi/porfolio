@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles/Home.scss';
 
+
 const Home = () => {
   return (
+    <div className="home">
     <>
       <div className='headings'>
         <div>
@@ -32,7 +34,9 @@ const Home = () => {
         </div>
       </div>
     </>
+    
+    </div>
   );
-};
+  }
 
 export default Home;
