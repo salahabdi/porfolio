@@ -3,6 +3,8 @@
     align-items: center;
     justify-content: flex-end;
     padding: 20px;
+    box-sizing: border-box;
+    
   }
   
   .navbar__button {
@@ -27,4 +29,9 @@
     font-weight: bold;
     color: #666666;
   }
-  
+  .scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+  }
